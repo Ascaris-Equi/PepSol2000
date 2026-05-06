@@ -1,0 +1,9 @@
+﻿solvent_name,solvent_id,solvent_class,is_aqueous,is_buffer,is_salt_containing,is_organic,is_acidic_condition,is_basic_condition,pH,ionic_strength_M,dielectric_constant,kamlet_taft_alpha,kamlet_taft_beta,kamlet_taft_pi_star,hansen_delta_d,hansen_delta_p,hansen_delta_h,notes
+Ultrapure water,ultrapure_water,water,1,0,0,0,0,0,,,,,,,,,,manual fill if available
+1X DPBS,s_1x_dpbs,dpbs,1,1,1,0,0,0,,,,,,,,,,manual fill if available
+0.1 M PBS,s_0_1_m_pbs,pbs,1,1,1,0,0,0,,,,,,,,,,manual fill if available
+DMSO,dmso,dmso,0,0,0,1,0,0,,,,,,,,,,manual fill if available
+HCOOH,hcooh,formic_acid,0,0,0,1,1,0,,,,,,,,,,manual fill if available
+Saline,saline,saline,1,0,1,0,0,0,,,,,,,,,,manual fill if available
+0.2M acetic acid,s_0_2m_acetic_acid,acetic_acid,1,0,0,0,1,0,,,,,,,,,,manual fill if available
+3% ammonia water(v/v),s_3pct_ammonia_water_v_v,ammonia_water,1,0,0,0,0,1,,,,,,,,,,manual fill if available

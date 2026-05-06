@@ -1,0 +1,53 @@
+{
+  "name": "SolPepBench",
+  "repository_name": "PepSol2000",
+  "version": "0.1.0",
+  "description": "A solvent-conditioned peptide solubility dataset organized at the peptide-solvent observation level.",
+  "prediction_unit": "peptide-solvent observation",
+  "task": "binary solvent-conditioned peptide solubility classification",
+  "label_definition": {
+    "1": "soluble",
+    "0": "insoluble"
+  },
+  "dataset_size": {
+    "raw_wide_peptide_rows": 1957,
+    "labeled_peptide_solvent_records": 4405,
+    "unique_peptides_in_long_table": 1337,
+    "solvents_with_labels": 7,
+    "soluble_records": 2844,
+    "insoluble_records": 1561,
+    "positive_rate": 0.6456299659477867
+  },
+  "solvent_conditioned_statistics": {
+    "sequences_tested_in_multiple_solvents": 1337,
+    "discordant_solvent_label_sequences": 839,
+    "duplicate_sequence_solvent_groups": 219,
+    "conflicting_sequence_solvent_groups": 21
+  },
+  "files": {
+    "raw_input": "data/raw/pep.csv",
+    "processed_directory": "data/processed/",
+    "paper_numbers": "docs/paper_numbers.txt",
+    "build_script": "scripts/build_dataset.py"
+  },
+  "intended_use": [
+    "Evaluation of solvent-conditioned peptide solubility prediction methods",
+    "Analysis of peptide solubility variation across solvent or formulation conditions",
+    "Dataset and benchmark development for peptide-solvent prediction tasks"
+  ],
+  "out_of_scope_use": [
+    "Direct clinical decision-making",
+    "Manufacturing release decisions",
+    "Replacement of experimental solubility testing",
+    "Claims about biological activity, toxicity, safety, or efficacy"
+  ],
+  "release_status": {
+    "data_tables": "included",
+    "basic_metadata": "included",
+    "readme": "included",
+    "baseline_code": "to_be_added_later",
+    "official_splits": "to_be_added_later",
+    "croissant_metadata": "to_be_added_later",
+    "reporting_utilities": "to_be_added_later"
+  }
+}

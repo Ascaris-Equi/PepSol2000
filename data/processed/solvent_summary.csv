@@ -1,0 +1,9 @@
+﻿solvent_name,solvent_id,n_labeled_records,n_soluble,n_insoluble,positive_rate,n_missing_cells,n_unique_peptides
+Ultrapure water,ultrapure_water,1436,884,552,0.6155988857938719,521,1337
+1X DPBS,s_1x_dpbs,694,249,445,0.35878962536023057,1263,668
+0.1 M PBS,s_0_1_m_pbs,711,338,373,0.47538677918424754,1246,641
+DMSO,dmso,1436,1245,191,0.866991643454039,521,1337
+HCOOH,hcooh,56,56,0,1.0,1901,56
+Saline,saline,0,0,0,,1957,0
+0.2M acetic acid,s_0_2m_acetic_acid,14,14,0,1.0,1943,14
+3% ammonia water(v/v),s_3pct_ammonia_water_v_v,58,58,0,1.0,1899,56

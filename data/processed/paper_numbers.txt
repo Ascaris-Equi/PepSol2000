@@ -1,0 +1,164 @@
+SolPepBench / pep.csv data audit
+============================================================
+
+1. File reading
+------------------------------------------------------------
+Input file: pep.csv
+Read info: {'encoding': 'gb18030', 'sep': 'auto', 'shape': [1957, 14], 'score': 184.0}
+
+2. Core dataset size
+------------------------------------------------------------
+Wide peptide rows: 1957
+Labeled peptide-solvent records: 4405
+Unique peptides in wide table: 1796
+Unique peptides in long table: 1337
+Detected solvent columns: 8
+Solvent columns with labels: 7
+
+3. Label balance
+------------------------------------------------------------
+Soluble records: 2844
+Insoluble records: 1561
+Positive rate: 0.6456299659477867
+
+4. Detected solvent columns
+------------------------------------------------------------
+- Ultrapure water
+- 1X DPBS
+- 0.1 M PBS
+- DMSO
+- HCOOH
+- Saline
+- 0.2M acetic acid
+- 3% ammonia water(v/v)
+
+5. Solvent summary
+------------------------------------------------------------
+         solvent_name               solvent_id  n_labeled_records  n_soluble  n_insoluble  positive_rate  n_missing_cells  n_unique_peptides
+      Ultrapure water          ultrapure_water               1436        884          552       0.615599              521               1337
+              1X DPBS                s_1x_dpbs                694        249          445       0.358790             1263                668
+            0.1 M PBS              s_0_1_m_pbs                711        338          373       0.475387             1246                641
+                 DMSO                     dmso               1436       1245          191       0.866992              521               1337
+                HCOOH                    hcooh                 56         56            0       1.000000             1901                 56
+               Saline                   saline                  0          0            0            NaN             1957                  0
+     0.2M acetic acid       s_0_2m_acetic_acid                 14         14            0       1.000000             1943                 14
+3% ammonia water(v/v) s_3pct_ammonia_water_v_v                 58         58            0       1.000000             1899                 56
+
+6. Peptide length statistics
+------------------------------------------------------------
+n: 1796
+mean: 22.472160356347437
+std: 6.008147115775443
+min: 7.0
+q1: 17.0
+median: 25.0
+q3: 27.0
+max: 43.0
+
+7. Sequence QC
+------------------------------------------------------------
+Canonical sequences: 1796
+Noncanonical or missing sequences: 0
+
+8. Solvent-conditioned label variability
+------------------------------------------------------------
+Sequences tested in multiple solvents: 1337
+Sequences with discordant solvent labels: 839
+
+9. Duplicate / conflict QC
+------------------------------------------------------------
+Duplicate sequence-solvent groups: 219
+Conflicting sequence-solvent groups: 21
+
+Top conflict rows:
+             sequence_clean    solvent_name  n_records  n_unique_labels labels_observed  has_duplicate  has_conflict                                                                      observation_ids
+          HVLWDLKQMFRCAVLKN Ultrapure water          5                2             0;1              1             1 obs_c726c3503e72;obs_fed595821091;obs_01e4fec40939;obs_f8fc274cb3f6;obs_dd13a9580b98
+          KRWLYWQPTLTKMGFVS Ultrapure water          5                2             0;1              1             1 obs_2dafe24224c9;obs_c0c7f771a5bb;obs_a69e4e7d053d;obs_4cd30883f99e;obs_6a7bf8d61fac
+          LSTYRTACTLRFVQKRC       0.1 M PBS          5                2             0;1              1             1 obs_c6a6b58665ce;obs_ba4b15396522;obs_7167f4855477;obs_f4b1f9b26233;obs_daed974d71ea
+          LYTHFLQLPLAATGFSV Ultrapure water          5                2             0;1              1             1 obs_f9034d9db45c;obs_e4dbb1c038c9;obs_dc914356049b;obs_99173c5ab724;obs_8538be50a3fb
+  KTPQHVKITDFGRAKLLGAEEKEYH            DMSO          4                2             0;1              1             1                  obs_b2a464e8d8ce;obs_9916ceb139a3;obs_dbe91ecae663;obs_a5190ebbe8b2
+          HTDAHAQAFAALFDSMH Ultrapure water          3                2             0;1              1             1                                   obs_21293b40f915;obs_c30cf4f9f8b3;obs_0d9e3b83ab96
+          LKNIVISLPRLPLVNSY Ultrapure water          3                2             0;1              1             1                                   obs_8dd7ba567b69;obs_4a08db738230;obs_a395e80118d1
+AEKEDKMLALSLEYEHLLYGDIIRQDF       0.1 M PBS          2                2             0;1              1             1                                                    obs_e213ae71fdff;obs_9300750dee69
+                ASILNGLIWLK Ultrapure water          2                2             0;1              1             1                                                    obs_c3b6b385d2ae;obs_566ff7314bd8
+ERMEDRCRGEYERFFLREFHKWIERVV Ultrapure water          2                2             0;1              1             1                                                    obs_64e93ff907cd;obs_a7be129cde74
+          GNLAGLNTRGPQYLALY            DMSO          2                2             0;1              1             1                                                    obs_ce1fb5603c71;obs_d38cb1eb1309
+          GNNAFRVYLMLPLSERP            DMSO          2                2             0;1              1             1                                                    obs_d64cd8733d6d;obs_e0213ba20f7c
+KAENDLNELKPLVYSPHAIVVRGALEI       0.1 M PBS          2                2             0;1              1             1                                                    obs_724548f59db0;obs_6f9bb71bc407
+          LVPSDIAACFTLLHQQQ Ultrapure water          2                2             0;1              1             1                                                    obs_f6f8533d497d;obs_d36dc0543e9b
+          NWEVYKLLSHVRPPVSK         1X DPBS          2                2             0;1              1             1                                                    obs_37dfb9217bd6;obs_c1dbe13494ad
+          NWEVYKLLSHVRPPVSK Ultrapure water          2                2             0;1              1             1                                                    obs_caef76775e1a;obs_104496f83825
+PSKPSFQEFVDWENVSPELNSTDQPFL       0.1 M PBS          2                2             0;1              1             1                                                    obs_a4c3b730ec20;obs_5730920ad774
+          SFLPGISTALTRIITGD       0.1 M PBS          2                2             0;1              1             1                                                    obs_76beff9f5862;obs_a7133e13b428
+VNGSHSDHPEINCLKVVRDILLEQSLQ       0.1 M PBS          2                2             0;1              1             1                                                    obs_7ee23d5faf11;obs_a094447f8af1
+VNGSHSDHPEINCLKVVRDILLEQSLQ Ultrapure water          2                2             0;1              1             1                                                    obs_94911bceb7f2;obs_cfcc67509f74
+          YECKKCEKLFTHPVYLN Ultrapure water          2                2             0;1              1             1                                                    obs_7b0af2d193d2;obs_3dbc905947e1
+
+10. Difficulty / Mw / quantity / HPLC summaries
+------------------------------------------------------------
+Difficulty prediction counts:
+  difficult: 1510
+  easy: 447
+
+Mw input stats:
+{'n': 1917, 'mean': 2372.693594157538, 'std': 761.0380801465319, 'min': 768.95, 'q1': 1895.05, 'median': 2618.859, 'q3': 2918.38, 'max': 4889.86}
+
+Quantity total mg stats:
+{'n': 1917, 'mean': 32.76703182055295, 'std': 26.392166038229753, 'min': 4.0, 'q1': 14.0, 'median': 24.0, 'q3': 46.8, 'max': 200.0}
+
+HPLC percent stats:
+{'n': 1917, 'mean': 97.27037037037036, 'std': 2.3070257851617906, 'min': 85.1, 'q1': 96.2, 'median': 98.1, 'q3': 98.8, 'max': 99.9}
+
+11. Unknown label values
+------------------------------------------------------------
+Unknown label values count: 497
+ row_index  solvent_column raw_value
+       266 Ultrapure water         5
+       268 Ultrapure water         2
+       272 Ultrapure water         2
+       273 Ultrapure water         2
+       276 Ultrapure water         2
+       283 Ultrapure water         2
+       284 Ultrapure water         5
+       292 Ultrapure water         2
+       293 Ultrapure water         5
+       295 Ultrapure water         5
+       296 Ultrapure water         5
+       299 Ultrapure water         5
+       300 Ultrapure water         5
+       302 Ultrapure water         2
+       303 Ultrapure water         5
+       304 Ultrapure water         2
+       305 Ultrapure water         5
+       307 Ultrapure water         5
+       309 Ultrapure water         2
+       312 Ultrapure water         5
+       313 Ultrapure water        10
+       314 Ultrapure water        10
+       361 Ultrapure water        10
+       362 Ultrapure water        10
+       363 Ultrapure water        10
+       364 Ultrapure water         5
+       365 Ultrapure water         5
+       366 Ultrapure water         5
+       367 Ultrapure water        10
+       368 Ultrapure water         5
+
+12. Output files
+------------------------------------------------------------
+clean_wide: data_out/clean_wide.csv
+long_peptide_solvent: data_out/long_peptide_solvent.csv
+peptide_features: data_out/peptide_features.csv
+features_for_model: data_out/features_for_model.csv
+solvent_summary: data_out/solvent_summary.csv
+sequence_label_variability: data_out/sequence_label_variability.csv
+duplicate_conflicts: data_out/duplicate_conflicts.csv
+sequence_qc: data_out/sequence_qc.csv
+mw_discrepancies: data_out/mw_discrepancies.csv
+unknown_label_values: data_out/unknown_label_values.csv
+solvent_metadata_template: data_out/solvent_metadata_template.csv
+summary_json: data_out/summary.json
+
+13. Draft paper sentence
+------------------------------------------------------------
+The dataset contains 4405 labeled peptide-solvent observations derived from 1337 unique peptide sequences and 7 solvent/formulation conditions. It includes 2844 soluble and 1561 insoluble observations. 1337 peptide sequences were tested in multiple solvent conditions, and 839 sequences showed discordant solubility labels across solvents.

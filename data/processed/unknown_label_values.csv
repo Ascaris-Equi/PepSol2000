@@ -1,0 +1,498 @@
+﻿row_index,solvent_column,raw_value
+266,Ultrapure water,5
+268,Ultrapure water,2
+272,Ultrapure water,2
+273,Ultrapure water,2
+276,Ultrapure water,2
+283,Ultrapure water,2
+284,Ultrapure water,5
+292,Ultrapure water,2
+293,Ultrapure water,5
+295,Ultrapure water,5
+296,Ultrapure water,5
+299,Ultrapure water,5
+300,Ultrapure water,5
+302,Ultrapure water,2
+303,Ultrapure water,5
+304,Ultrapure water,2
+305,Ultrapure water,5
+307,Ultrapure water,5
+309,Ultrapure water,2
+312,Ultrapure water,5
+313,Ultrapure water,10
+314,Ultrapure water,10
+361,Ultrapure water,10
+362,Ultrapure water,10
+363,Ultrapure water,10
+364,Ultrapure water,5
+365,Ultrapure water,5
+366,Ultrapure water,5
+367,Ultrapure water,10
+368,Ultrapure water,5
+369,Ultrapure water,5
+377,Ultrapure water,10
+380,Ultrapure water,10
+381,Ultrapure water,10
+382,Ultrapure water,5
+384,Ultrapure water,5
+385,Ultrapure water,5
+391,Ultrapure water,5
+392,Ultrapure water,2
+394,Ultrapure water,5
+395,Ultrapure water,10
+396,Ultrapure water,10
+397,Ultrapure water,5
+399,Ultrapure water,10
+400,Ultrapure water,5
+401,Ultrapure water,5
+404,Ultrapure water,5
+405,Ultrapure water,5
+407,Ultrapure water,5
+408,Ultrapure water,5
+411,Ultrapure water,5
+412,Ultrapure water,5
+413,Ultrapure water,5
+414,Ultrapure water,5
+415,Ultrapure water,10
+416,Ultrapure water,5
+417,Ultrapure water,5
+422,Ultrapure water,2
+423,Ultrapure water,5
+424,Ultrapure water,5
+425,Ultrapure water,5
+427,Ultrapure water,5
+428,Ultrapure water,5
+435,Ultrapure water,10
+437,Ultrapure water,5
+438,Ultrapure water,5
+446,Ultrapure water,5
+448,Ultrapure water,2
+450,Ultrapure water,2
+451,Ultrapure water,5
+455,Ultrapure water,2
+456,Ultrapure water,5
+458,Ultrapure water,5
+460,Ultrapure water,5
+461,Ultrapure water,5
+462,Ultrapure water,5
+463,Ultrapure water,5
+464,Ultrapure water,5
+465,Ultrapure water,5
+466,Ultrapure water,5
+467,Ultrapure water,5
+469,Ultrapure water,5
+470,Ultrapure water,5
+471,Ultrapure water,5
+472,Ultrapure water,5
+649,Ultrapure water,5
+650,Ultrapure water,5
+651,Ultrapure water,5
+652,Ultrapure water,5
+653,Ultrapure water,10
+654,Ultrapure water,5
+656,Ultrapure water,5
+659,Ultrapure water,5
+660,Ultrapure water,5
+661,Ultrapure water,5
+665,Ultrapure water,5
+666,Ultrapure water,5
+667,Ultrapure water,5
+668,Ultrapure water,5
+669,Ultrapure water,5
+672,Ultrapure water,5
+673,Ultrapure water,5
+674,Ultrapure water,5
+675,Ultrapure water,2
+683,Ultrapure water,5
+684,Ultrapure water,5
+687,Ultrapure water,10
+688,Ultrapure water,2
+693,Ultrapure water,5
+696,Ultrapure water,5
+697,Ultrapure water,2
+698,Ultrapure water,5
+700,Ultrapure water,5
+706,Ultrapure water,5
+708,Ultrapure water,2
+710,Ultrapure water,2
+712,Ultrapure water,2
+713,Ultrapure water,2
+714,Ultrapure water,2
+717,Ultrapure water,2
+719,Ultrapure water,2
+720,Ultrapure water,5
+721,Ultrapure water,2
+727,Ultrapure water,2
+729,Ultrapure water,2
+731,Ultrapure water,2
+732,Ultrapure water,2
+733,Ultrapure water,2
+735,Ultrapure water,2
+736,Ultrapure water,5
+740,Ultrapure water,2
+741,Ultrapure water,2
+745,Ultrapure water,2
+747,Ultrapure water,2
+748,Ultrapure water,5
+749,Ultrapure water,2
+753,Ultrapure water,2
+755,Ultrapure water,5
+756,Ultrapure water,5
+268,1X DPBS,2
+272,1X DPBS,2
+273,1X DPBS,2
+293,1X DPBS,2
+303,1X DPBS,5
+305,1X DPBS,5
+307,1X DPBS,2
+312,1X DPBS,2
+313,1X DPBS,10
+314,1X DPBS,10
+361,1X DPBS,10
+362,1X DPBS,10
+363,1X DPBS,10
+364,1X DPBS,5
+365,1X DPBS,5
+366,1X DPBS,5
+367,1X DPBS,10
+368,1X DPBS,5
+369,1X DPBS,5
+377,1X DPBS,10
+380,1X DPBS,10
+381,1X DPBS,10
+384,1X DPBS,5
+395,1X DPBS,10
+396,1X DPBS,10
+399,1X DPBS,10
+407,1X DPBS,5
+411,1X DPBS,5
+412,1X DPBS,5
+413,1X DPBS,5
+414,1X DPBS,2
+415,1X DPBS,5
+416,1X DPBS,2
+417,1X DPBS,5
+425,1X DPBS,5
+435,1X DPBS,10
+437,1X DPBS,5
+438,1X DPBS,2
+446,1X DPBS,2
+448,1X DPBS,2
+458,1X DPBS,2
+650,1X DPBS,5
+651,1X DPBS,5
+652,1X DPBS,5
+653,1X DPBS,10
+654,1X DPBS,5
+656,1X DPBS,5
+660,1X DPBS,5
+661,1X DPBS,5
+666,1X DPBS,5
+667,1X DPBS,5
+668,1X DPBS,5
+670,1X DPBS,2
+672,1X DPBS,5
+674,1X DPBS,5
+683,1X DPBS,5
+684,1X DPBS,2
+687,1X DPBS,10
+688,1X DPBS,2
+693,1X DPBS,5
+696,1X DPBS,5
+697,1X DPBS,2
+698,1X DPBS,5
+700,1X DPBS,5
+706,1X DPBS,5
+708,1X DPBS,2
+710,1X DPBS,2
+712,1X DPBS,2
+714,1X DPBS,2
+717,1X DPBS,5
+718,1X DPBS,2
+720,1X DPBS,5
+727,1X DPBS,2
+729,1X DPBS,2
+734,1X DPBS,5
+735,1X DPBS,2
+736,1X DPBS,5
+740,1X DPBS,2
+745,1X DPBS,2
+748,1X DPBS,5
+753,1X DPBS,2
+755,1X DPBS,5
+756,1X DPBS,5
+295,0.1 M PBS,5
+296,0.1 M PBS,5
+400,0.1 M PBS,5
+401,0.1 M PBS,5
+460,0.1 M PBS,5
+461,0.1 M PBS,5
+462,0.1 M PBS,2
+464,0.1 M PBS,5
+466,0.1 M PBS,5
+467,0.1 M PBS,5
+469,0.1 M PBS,5
+470,0.1 M PBS,5
+264,DMSO,2
+265,DMSO,5
+266,DMSO,10
+267,DMSO,10
+268,DMSO,5
+269,DMSO,5
+270,DMSO,2
+271,DMSO,5
+272,DMSO,10
+273,DMSO,5
+274,DMSO,5
+275,DMSO,10
+276,DMSO,5
+277,DMSO,2
+278,DMSO,5
+279,DMSO,5
+280,DMSO,2
+281,DMSO,10
+282,DMSO,5
+284,DMSO,10
+285,DMSO,2
+286,DMSO,10
+287,DMSO,5
+288,DMSO,2
+289,DMSO,5
+290,DMSO,10
+291,DMSO,5
+292,DMSO,10
+293,DMSO,10
+294,DMSO,2
+295,DMSO,10
+296,DMSO,10
+297,DMSO,10
+298,DMSO,10
+299,DMSO,5
+300,DMSO,10
+301,DMSO,10
+302,DMSO,5
+303,DMSO,10
+304,DMSO,5
+305,DMSO,10
+307,DMSO,10
+309,DMSO,5
+310,DMSO,10
+311,DMSO,5
+312,DMSO,5
+313,DMSO,10
+314,DMSO,10
+315,DMSO,5
+316,DMSO,10
+361,DMSO,10
+362,DMSO,10
+363,DMSO,10
+364,DMSO,10
+365,DMSO,10
+366,DMSO,10
+367,DMSO,10
+368,DMSO,10
+369,DMSO,10
+370,DMSO,10
+371,DMSO,10
+372,DMSO,10
+373,DMSO,10
+374,DMSO,10
+375,DMSO,10
+377,DMSO,10
+378,DMSO,10
+379,DMSO,10
+380,DMSO,10
+381,DMSO,10
+382,DMSO,10
+383,DMSO,10
+384,DMSO,10
+385,DMSO,10
+386,DMSO,10
+387,DMSO,10
+388,DMSO,10
+389,DMSO,10
+390,DMSO,10
+391,DMSO,10
+392,DMSO,10
+393,DMSO,10
+394,DMSO,10
+395,DMSO,10
+396,DMSO,10
+397,DMSO,10
+398,DMSO,10
+399,DMSO,10
+400,DMSO,10
+401,DMSO,10
+402,DMSO,10
+403,DMSO,10
+404,DMSO,5
+405,DMSO,10
+406,DMSO,10
+407,DMSO,10
+408,DMSO,10
+410,DMSO,10
+411,DMSO,10
+412,DMSO,10
+413,DMSO,10
+414,DMSO,10
+415,DMSO,10
+416,DMSO,10
+417,DMSO,10
+419,DMSO,10
+420,DMSO,10
+422,DMSO,10
+423,DMSO,10
+424,DMSO,10
+425,DMSO,10
+426,DMSO,10
+427,DMSO,10
+428,DMSO,10
+429,DMSO,10
+430,DMSO,10
+431,DMSO,10
+432,DMSO,10
+434,DMSO,10
+435,DMSO,10
+436,DMSO,10
+437,DMSO,10
+438,DMSO,5
+439,DMSO,5
+440,DMSO,5
+441,DMSO,10
+442,DMSO,5
+444,DMSO,5
+445,DMSO,5
+446,DMSO,10
+447,DMSO,5
+448,DMSO,5
+449,DMSO,10
+450,DMSO,5
+451,DMSO,10
+453,DMSO,5
+454,DMSO,5
+455,DMSO,5
+456,DMSO,10
+457,DMSO,5
+458,DMSO,10
+459,DMSO,5
+460,DMSO,10
+461,DMSO,10
+462,DMSO,5
+463,DMSO,10
+464,DMSO,5
+465,DMSO,10
+466,DMSO,5
+467,DMSO,5
+468,DMSO,10
+469,DMSO,10
+470,DMSO,10
+471,DMSO,5
+472,DMSO,10
+473,DMSO,10
+648,DMSO,10
+649,DMSO,10
+650,DMSO,10
+653,DMSO,10
+654,DMSO,10
+655,DMSO,10
+656,DMSO,10
+657,DMSO,10
+658,DMSO,10
+659,DMSO,10
+660,DMSO,10
+661,DMSO,10
+663,DMSO,10
+664,DMSO,10
+665,DMSO,10
+666,DMSO,10
+668,DMSO,10
+669,DMSO,10
+671,DMSO,10
+672,DMSO,10
+673,DMSO,10
+674,DMSO,10
+675,DMSO,5
+678,DMSO,5
+680,DMSO,5
+681,DMSO,10
+683,DMSO,10
+685,DMSO,5
+686,DMSO,5
+687,DMSO,10
+688,DMSO,5
+689,DMSO,5
+690,DMSO,10
+691,DMSO,5
+692,DMSO,10
+695,DMSO,5
+696,DMSO,10
+698,DMSO,10
+699,DMSO,10
+700,DMSO,10
+701,DMSO,5
+702,DMSO,5
+703,DMSO,5
+705,DMSO,10
+706,DMSO,10
+707,DMSO,5
+708,DMSO,5
+709,DMSO,5
+710,DMSO,5
+711,DMSO,10
+712,DMSO,5
+713,DMSO,10
+714,DMSO,10
+716,DMSO,2
+718,DMSO,10
+719,DMSO,5
+720,DMSO,10
+721,DMSO,5
+725,DMSO,10
+727,DMSO,5
+728,DMSO,5
+729,DMSO,5
+731,DMSO,5
+733,DMSO,5
+734,DMSO,5
+735,DMSO,5
+736,DMSO,10
+737,DMSO,10
+738,DMSO,5
+739,DMSO,5
+740,DMSO,10
+741,DMSO,10
+742,DMSO,10
+743,DMSO,2
+745,DMSO,10
+746,DMSO,5
+747,DMSO,5
+748,DMSO,10
+749,DMSO,5
+753,DMSO,5
+755,DMSO,5
+756,DMSO,10
+306,HCOOH,2
+308,HCOOH,2
+418,HCOOH,2
+443,HCOOH,2
+452,HCOOH,2
+662,HCOOH,2
+677,HCOOH,5
+679,HCOOH,5
+682,HCOOH,2
+715,HCOOH,2
+722,HCOOH,2
+723,HCOOH,2
+724,HCOOH,2
+726,HCOOH,2
+376,3% ammonia water(v/v),2
+409,3% ammonia water(v/v),2
+421,3% ammonia water(v/v),2
+433,3% ammonia water(v/v),2
+646,3% ammonia water(v/v),2
+647,3% ammonia water(v/v),2
+676,3% ammonia water(v/v),2
+694,3% ammonia water(v/v),2
+704,3% ammonia water(v/v),2
+730,3% ammonia water(v/v),2
+754,3% ammonia water(v/v),2

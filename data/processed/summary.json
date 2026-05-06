@@ -1,0 +1,96 @@
+{
+  "read_info": {
+    "encoding": "gb18030",
+    "sep": "auto",
+    "shape": [
+      1957,
+      14
+    ],
+    "score": 184.0
+  },
+  "wide_peptide_rows": 1957,
+  "labeled_peptide_solvent_records": 4405,
+  "unique_peptides_wide": 1796,
+  "unique_peptides_long": 1337,
+  "detected_solvent_columns": [
+    "Ultrapure water",
+    "1X DPBS",
+    "0.1 M PBS",
+    "DMSO",
+    "HCOOH",
+    "Saline",
+    "0.2M acetic acid",
+    "3% ammonia water(v/v)"
+  ],
+  "n_detected_solvent_columns": 8,
+  "n_solvents_with_labels": 7,
+  "label_counts": {
+    "soluble": 2844,
+    "insoluble": 1561,
+    "positive_rate": 0.6456299659477867
+  },
+  "canonical_sequence_count": 1796,
+  "noncanonical_or_missing_sequence_count": 0,
+  "peptide_length_stats": {
+    "n": 1796,
+    "mean": 22.472160356347437,
+    "std": 6.008147115775443,
+    "min": 7.0,
+    "q1": 17.0,
+    "median": 25.0,
+    "q3": 27.0,
+    "max": 43.0
+  },
+  "mw_input_stats": {
+    "n": 1917,
+    "mean": 2372.693594157538,
+    "std": 761.0380801465319,
+    "min": 768.95,
+    "q1": 1895.05,
+    "median": 2618.859,
+    "q3": 2918.38,
+    "max": 4889.86
+  },
+  "quantity_total_mg_stats": {
+    "n": 1917,
+    "mean": 32.76703182055295,
+    "std": 26.392166038229753,
+    "min": 4.0,
+    "q1": 14.0,
+    "median": 24.0,
+    "q3": 46.8,
+    "max": 200.0
+  },
+  "hplc_percent_stats": {
+    "n": 1917,
+    "mean": 97.27037037037036,
+    "std": 2.3070257851617906,
+    "min": 85.1,
+    "q1": 96.2,
+    "median": 98.1,
+    "q3": 98.8,
+    "max": 99.9
+  },
+  "difficulty_prediction_counts": {
+    "difficult": 1510,
+    "easy": 447
+  },
+  "sequences_tested_in_multiple_solvents": 1337,
+  "sequences_with_discordant_solvent_labels": 839,
+  "duplicate_sequence_solvent_groups": 219,
+  "conflicting_sequence_solvent_groups": 21,
+  "unknown_label_values_count": 497,
+  "output_files": {
+    "clean_wide": "data_out/clean_wide.csv",
+    "long_peptide_solvent": "data_out/long_peptide_solvent.csv",
+    "peptide_features": "data_out/peptide_features.csv",
+    "features_for_model": "data_out/features_for_model.csv",
+    "solvent_summary": "data_out/solvent_summary.csv",
+    "sequence_label_variability": "data_out/sequence_label_variability.csv",
+    "duplicate_conflicts": "data_out/duplicate_conflicts.csv",
+    "sequence_qc": "data_out/sequence_qc.csv",
+    "mw_discrepancies": "data_out/mw_discrepancies.csv",
+    "unknown_label_values": "data_out/unknown_label_values.csv",
+    "solvent_metadata_template": "data_out/solvent_metadata_template.csv"
+  }
+}
