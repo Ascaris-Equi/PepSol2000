@@ -1,0 +1,10 @@
+Data, metadata, documentation, processed tables, split files, and benchmark
+result tables in this anonymous review artifact are released under the
+Creative Commons Attribution 4.0 International License, CC BY 4.0.
+
+During anonymous review, attribution should refer to the anonymous submission:
+"SolPepBench: A Solvent-Conditioned Dataset and Benchmark Definition for
+Peptide Solubility Prediction."
+
+The public camera-ready release should replace this anonymous attribution
+statement with the final author and repository information.

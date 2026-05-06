@@ -1,0 +1,29 @@
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Protocol} & \textbf{Model} & \textbf{AUROC} & \textbf{F1} & \textbf{MCC} & \textbf{Acc.} \\
+\midrule
+pair-stratified & majority\_class & 0.500 & 0.785 & 0.000 & 0.646 \\
+pair-stratified & stratified\_dummy & 0.540 & 0.667 & 0.079 & 0.575 \\
+pair-stratified & sequence\_logistic & 0.704 & 0.692 & 0.280 & 0.640 \\
+pair-stratified & solvent\_logistic & 0.727 & 0.616 & 0.352 & 0.617 \\
+pair-stratified & sequence\_solvent\_logistic & 0.824 & 0.787 & 0.472 & 0.743 \\
+pair-stratified & sequence\_solvent\_random\_forest & 0.869 & 0.853 & 0.556 & 0.802 \\
+pair-stratified & sequence\_solvent\_gradient\_boosting & 0.859 & 0.853 & 0.560 & 0.803 \\
+\midrule
+sequence-disjoint & majority\_class & 0.500 & 0.791 & 0.000 & 0.655 \\
+sequence-disjoint & stratified\_dummy & 0.530 & 0.664 & 0.058 & 0.568 \\
+sequence-disjoint & sequence\_logistic & 0.693 & 0.706 & 0.269 & 0.645 \\
+sequence-disjoint & solvent\_logistic & 0.735 & 0.621 & 0.360 & 0.618 \\
+sequence-disjoint & sequence\_solvent\_logistic & 0.825 & 0.788 & 0.472 & 0.742 \\
+sequence-disjoint & sequence\_solvent\_random\_forest & 0.836 & 0.826 & 0.469 & 0.765 \\
+sequence-disjoint & sequence\_solvent\_gradient\_boosting & 0.841 & 0.838 & 0.506 & 0.782 \\
+\midrule
+solvent-held-out & majority\_class & 0.500 & 0.838 $\pm$ 0.194 & 0.000 & 0.760 $\pm$ 0.273 \\
+solvent-held-out & stratified\_dummy & 0.494 $\pm$ 0.028 & 0.673 $\pm$ 0.136 & -0.006 $\pm$ 0.040 & 0.566 $\pm$ 0.101 \\
+solvent-held-out & sequence\_logistic & 0.724 $\pm$ 0.144 & 0.604 $\pm$ 0.120 & 0.183 $\pm$ 0.230 & 0.511 $\pm$ 0.194 \\
+solvent-held-out & solvent\_logistic & 0.500 & 0.838 $\pm$ 0.194 & 0.000 & 0.760 $\pm$ 0.273 \\
+solvent-held-out & sequence\_solvent\_logistic & 0.712 $\pm$ 0.133 & 0.773 $\pm$ 0.137 & 0.059 $\pm$ 0.085 & 0.662 $\pm$ 0.168 \\
+solvent-held-out & sequence\_solvent\_random\_forest & 0.766 $\pm$ 0.157 & 0.598 $\pm$ 0.327 & 0.143 $\pm$ 0.240 & 0.529 $\pm$ 0.333 \\
+solvent-held-out & sequence\_solvent\_gradient\_boosting & 0.710 $\pm$ 0.138 & 0.681 $\pm$ 0.139 & 0.080 $\pm$ 0.148 & 0.554 $\pm$ 0.169 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,677 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "dct": "http://purl.org/dc/terms/",
+    "conformsTo": "dct:conformsTo",
+    "citeAs": "cr:citeAs",
+    "recordSet": "cr:recordSet",
+    "field": "cr:field",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "source": "cr:source",
+    "fileObject": "cr:fileObject",
+    "extract": "cr:extract",
+    "column": "cr:column",
+    "sha256": "cr:sha256"
+  },
+  "@type": "sc:Dataset",
+  "name": "SolPepBench",
+  "description": "SolPepBench is a solvent-conditioned peptide solubility dataset and benchmark definition organized at the peptide--solvent observation level. The anonymous review artifact includes raw and processed tables, official split files, reference baseline results, quality-control summaries, metadata, checksums, and reproducibility scripts.",
+  "url": "https://anonymous.4open.science/r/PepSol2000-93DC/",
+  "version": "0.1.0-anonymous",
+  "dateCreated": "2026-05-06",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-07",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "sdLicense": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": [
+    {
+      "@type": "sc:Organization",
+      "name": "Anonymous Authors"
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Anonymous Authors"
+  },
+  "inLanguage": "en",
+  "keywords": [
+    "peptide solubility",
+    "solvent-conditioned prediction",
+    "peptide benchmark",
+    "molecular machine learning",
+    "dataset",
+    "evaluation"
+  ],
+  "isLiveDataset": false,
+  "conformsTo": [
+    "http://mlcommons.org/croissant/1.0",
+    "http://mlcommons.org/croissant/RAI/1.0"
+  ],
+  "citeAs": "Anonymous Authors. SolPepBench: A Solvent-Conditioned Dataset and Benchmark Definition for Peptide Solubility Prediction. Anonymous NeurIPS 2026 E&D review artifact, 2026.",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "README.md",
+      "name": "README.md",
+      "description": "Repository file included in the anonymous review artifact.",
+      "contentUrl": "README.md",
+      "encodingFormat": "text/markdown",
+      "sha256": "f649a9a534847d407a82f46476e29f05d41c948d2d652d0d27c0b285caa7901a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "requirements-minimal.txt",
+      "name": "requirements-minimal.txt",
+      "description": "Repository file included in the anonymous review artifact.",
+      "contentUrl": "requirements-minimal.txt",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "300c39e9970b37bc6dbb6dd6794e47f8e16a7b7025c76db9dc4d327abfe1bddd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "LICENSE",
+      "name": "LICENSE",
+      "description": "Repository file included in the anonymous review artifact.",
+      "contentUrl": "LICENSE",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "cd81430aa2008afc895f9eb7d0dfbcb5fb94239a461976a3bf87a2616c2820bd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "LICENSE-DATA",
+      "name": "LICENSE-DATA",
+      "description": "Repository file included in the anonymous review artifact.",
+      "contentUrl": "LICENSE-DATA",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "3fa83d1f6b0e7190e9bdadafaba4062f2eedf8447701b5720e182fd84d100398"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/raw/pep.csv",
+      "name": "pep.csv",
+      "description": "Raw wide-format input data table.",
+      "contentUrl": "data/raw/pep.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "787bceea890a37920160b167449ce582a207ddd233380d8a4a88d55ad5e73820"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/long_peptide_solvent.csv",
+      "name": "long_peptide_solvent.csv",
+      "description": "Main long-format peptide--solvent solubility table.",
+      "contentUrl": "data/processed/long_peptide_solvent.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "52142a7b6856bb46b9223fb72ac72ced411125bd6591fc38b0092ce176f3620f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/features_for_model.csv",
+      "name": "features_for_model.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/features_for_model.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "486d9991bd931df8b042ad29089d9a323c0b5673fa6156994e58c2c332141513"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/peptide_features.csv",
+      "name": "peptide_features.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/peptide_features.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "e04ee9c7448f20b0edf5c247b6585d1bfa51876be85717eaa0299bea8baf1ae9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/solvent_summary.csv",
+      "name": "solvent_summary.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/solvent_summary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "2be33b0b2a677ab2e4bb093b55ad9a9558b0b00b81762d6ef04cd4dc1e6a5e33"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/sequence_label_variability.csv",
+      "name": "sequence_label_variability.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/sequence_label_variability.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b3c5a212a818147bb41ebacdb2eaf2dae33da2b6f8a2c42976692954f4c33382"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/duplicate_conflicts.csv",
+      "name": "duplicate_conflicts.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/duplicate_conflicts.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "175170a19b727be57fd39940f6f24b7b95c230e9a9b3cc36a7b159e4640b4538"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/sequence_qc.csv",
+      "name": "sequence_qc.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/sequence_qc.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "6a3c440afa672ea4b8abb933c56450f88bfa2a27a2355535e043089c7a9661cd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/mw_discrepancies.csv",
+      "name": "mw_discrepancies.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/mw_discrepancies.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "21e576879bad21ba0687f7c48968e1b25149befd773baa77dca0b31da2b772d5"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/unknown_label_values.csv",
+      "name": "unknown_label_values.csv",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/unknown_label_values.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "05c3889f1023decb518754576dc8b3940b50f84cca5f5a87f95a76b185be2904"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/processed/summary.json",
+      "name": "summary.json",
+      "description": "Processed data table or quality-control output.",
+      "contentUrl": "data/processed/summary.json",
+      "encodingFormat": "application/json",
+      "sha256": "6ac6182a903fc2f6ef735f06b7147c34bb92ca2f2ab6c2002a8668fc80dddb29"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/metadata/dataset_metadata.json",
+      "name": "dataset_metadata.json",
+      "description": "Dataset metadata, dictionary, checksum, or Croissant file.",
+      "contentUrl": "data/metadata/dataset_metadata.json",
+      "encodingFormat": "application/json",
+      "sha256": "b93080467b01943ab30fabf61db5cccc4b13714426db7a2e602714a9e4b3e64f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/metadata/data_dictionary.csv",
+      "name": "data_dictionary.csv",
+      "description": "Dataset metadata, dictionary, checksum, or Croissant file.",
+      "contentUrl": "data/metadata/data_dictionary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "fc64e5c3503d485726b5c427372c3048e2f54fd2c0df9c6e6b430c96fa2792eb"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data/metadata/checksums.sha256",
+      "name": "checksums.sha256",
+      "description": "Dataset metadata, dictionary, checksum, or Croissant file.",
+      "contentUrl": "data/metadata/checksums.sha256",
+      "encodingFormat": "text/plain",
+      "sha256": "eeb0ed816e99a6cb651232f5ead08c996be37208d8a8a5af79b126735c70d734"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/README.md",
+      "name": "README.md",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/README.md",
+      "encodingFormat": "text/markdown",
+      "sha256": "0dedfc581643742ac5f696449be689d0c3d7f2f1cb5555334f4be5f068bb2e76"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/splits_manifest.json",
+      "name": "splits_manifest.json",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/splits_manifest.json",
+      "encodingFormat": "application/json",
+      "sha256": "860c65e42b451b704af68a0b74c19f510342339533647eca776a8083338295c1"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/pair_stratified_fold0.csv",
+      "name": "pair_stratified_fold0.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/pair_stratified_fold0.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a91c80dc1d05f0baa645a84a004cddc305b15339a02b0c7d401320c15f7e8bdf"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/pair_stratified_5fold.csv",
+      "name": "pair_stratified_5fold.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/pair_stratified_5fold.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "080df8bb7029190960532fa6b68838f28345d6e8b032b958337d245c0c8fe989"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/sequence_disjoint_fold0.csv",
+      "name": "sequence_disjoint_fold0.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/sequence_disjoint_fold0.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "920dcf7cd71b29d5bbab13b5a801dc9a9b2e51f9c08a30312c0eced0eaab7dba"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/sequence_disjoint_5fold.csv",
+      "name": "sequence_disjoint_5fold.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/sequence_disjoint_5fold.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1a74da0f91f24096cfa6c0736f5417ec33aaa2b8788c1c2526c3871889630db9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/solvent_heldout_loso.csv",
+      "name": "solvent_heldout_loso.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/solvent_heldout_loso.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b2c61a4622c8471d3b4ecf447cdee03025f2217e986f8303c22f7f322a6751b1"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits/solvent_heldout_fold0.csv",
+      "name": "solvent_heldout_fold0.csv",
+      "description": "Official split file or split manifest for SolPepBench.",
+      "contentUrl": "splits/solvent_heldout_fold0.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a948b7661d2f65a6963f2cfe00cf03a1f0a68f31c75bb97e5935448c69cec073"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results/baselines/baseline_metadata.json",
+      "name": "baseline_metadata.json",
+      "description": "Reference baseline result file for SolPepBench.",
+      "contentUrl": "results/baselines/baseline_metadata.json",
+      "encodingFormat": "application/json",
+      "sha256": "e05a973e34e8889f6fac9b2d3f619d8df1a5b97e27c6d4484f317caea057f884"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results/baselines/baseline_results.csv",
+      "name": "baseline_results.csv",
+      "description": "Reference baseline result file for SolPepBench.",
+      "contentUrl": "results/baselines/baseline_results.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "e7dcc88e7895f8a0150f692c876b4085550d69435abd0dcd9dc8a134ad17789b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results/baselines/baseline_summary.csv",
+      "name": "baseline_summary.csv",
+      "description": "Reference baseline result file for SolPepBench.",
+      "contentUrl": "results/baselines/baseline_summary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "f362773b1a35f569ae73630b6b276646fd1a2f7a4c5b2d61295e059bdfed49d8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results/baselines/baseline_errors.csv",
+      "name": "baseline_errors.csv",
+      "description": "Reference baseline result file for SolPepBench.",
+      "contentUrl": "results/baselines/baseline_errors.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "results/baselines/baseline_table.tex",
+      "name": "baseline_table.tex",
+      "description": "Reference baseline result file for SolPepBench.",
+      "contentUrl": "results/baselines/baseline_table.tex",
+      "encodingFormat": "text/x-tex",
+      "sha256": "d8fa83e432f8cfb491909bb83ba4ab30bd369cc98f88536311bd40efcca049de"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "scripts/build_dataset.py",
+      "name": "build_dataset.py",
+      "description": "Reproducibility script included in the anonymous review artifact.",
+      "contentUrl": "scripts/build_dataset.py",
+      "encodingFormat": "text/x-python",
+      "sha256": "9f170fffa970bf2edebe9240f22b0cc3100a4cfe9f630ecc1871fb679d54df02"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "scripts/make_official_splits.py",
+      "name": "make_official_splits.py",
+      "description": "Reproducibility script included in the anonymous review artifact.",
+      "contentUrl": "scripts/make_official_splits.py",
+      "encodingFormat": "text/x-python",
+      "sha256": "366efe381d6f53deb1be2306ef67e654a2381c0ef2b84957a77d4d6081956ff3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "scripts/run_reference_baselines.py",
+      "name": "run_reference_baselines.py",
+      "description": "Reproducibility script included in the anonymous review artifact.",
+      "contentUrl": "scripts/run_reference_baselines.py",
+      "encodingFormat": "text/x-python",
+      "sha256": "78d517683cdb48d3313a9573403f413b0e10ff2e928e4636dd8ff9c1e9ac9cae"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "scripts/make_croissant.py",
+      "name": "make_croissant.py",
+      "description": "Reproducibility script included in the anonymous review artifact.",
+      "contentUrl": "scripts/make_croissant.py",
+      "encodingFormat": "text/x-python",
+      "sha256": "5ade93260babe676f4d8829e09252b891d819d91cd89fa27e6a5092312aaf024"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "long_peptide_solvent_records",
+      "name": "long_peptide_solvent",
+      "description": "Rows of the main SolPepBench table. Each record is a peptide--solvent observation with a binary solubility label.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "﻿observation_id",
+          "description": "Column `﻿observation_id` in the long peptide--solvent table.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "﻿observation_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "source_row_index",
+          "description": "Row index in the raw wide-format input table.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "source_row_index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sequence_id",
+          "description": "Identifier for the cleaned peptide sequence.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "sequence_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sequence_raw",
+          "description": "Raw peptide sequence string before cleaning.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "sequence_raw"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sequence_clean",
+          "description": "Cleaned peptide sequence used for modeling and grouping.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "sequence_clean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "solvent_name",
+          "description": "Solvent or formulation condition name.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "solvent_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "solvent_id",
+          "description": "Identifier for the solvent or formulation condition.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "solvent_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "label_raw",
+          "description": "Raw solubility label value before binary standardization.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "label_raw"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "y",
+          "description": "Binary solubility label; 1 denotes soluble and 0 denotes insoluble under the specified solvent condition.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "y"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "difficulty_prediction",
+          "description": "Source-provided or derived difficulty prediction field, if available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "difficulty_prediction"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "difficulty_score",
+          "description": "Source-provided or derived difficulty score field as text, if available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "difficulty_score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "difficulty_score_num",
+          "description": "Numeric difficulty score, if parseable.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "difficulty_score_num"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mw",
+          "description": "Molecular weight field as represented in the source table, if available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "mw"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mw_num",
+          "description": "Numeric molecular weight, if parseable.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "mw_num"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "quantity_delivered",
+          "description": "Quantity delivered field from the source table, if available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "quantity_delivered"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "quantity_total_mg",
+          "description": "Numeric total quantity in milligrams, if parseable.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "quantity_total_mg"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "hplc_result",
+          "description": "HPLC result field from the source table, if available.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "hplc_result"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "hplc_percent",
+          "description": "Numeric HPLC percentage, if parseable.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "data/processed/long_peptide_solvent.csv"
+            },
+            "extract": {
+              "column": "hplc_percent"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataCollection": "The dataset is derived from a raw wide-format peptide table included in the review artifact. The processing pipeline converts solvent-specific label fields into long-format peptide--solvent observations and reports quality-control outputs for unknown labels, duplicates, conflicts, sequence checks, solvent summaries, and molecular-weight discrepancies.",
+  "rai:dataCollectionType": [
+    "Secondary Data Analysis",
+    "Experiments",
+    "Manual Human Curation"
+  ],
+  "rai:dataCollectionRawData": "The raw wide-format input table is included at data/raw/pep.csv.",
+  "rai:dataCollectionMissingData": "The current release does not contain complete formulation metadata such as pH, ionic strength, peptide concentration, counterion, temperature, incubation time, mixing procedure, or full analytical protocol for every record.",
+  "rai:dataAnnotationProtocol": "No new crowdsourced annotation was performed for this release. Binary labels are derived from solvent-specific fields in the raw table and standardized by scripts/build_dataset.py. Unrecognized label values are reported in quality-control outputs rather than silently interpreted.",
+  "rai:dataAnnotationPlatform": "No external annotation platform was used in the construction of this anonymous review artifact.",
+  "rai:dataAnnotationAnalysis": "The release reports duplicate sequence--solvent groups, conflicting sequence--solvent groups, unknown label values, sequence quality-control summaries, molecular-weight discrepancies, solvent-level summaries, and sequence-level label variability.",
+  "rai:annotationsPerItem": "Not applicable; the release does not introduce a new crowdsourced annotation process.",
+  "rai:machineAnnotationTools": [
+    "scripts/build_dataset.py",
+    "scripts/make_official_splits.py",
+    "scripts/run_reference_baselines.py"
+  ],
+  "rai:dataUseCases": [
+    "Dataset analysis of solvent-conditioned peptide solubility labels.",
+    "Development and evaluation of solvent-aware peptide solubility predictors.",
+    "Benchmarking under pair-stratified, sequence-disjoint, and solvent-held-out split protocols.",
+    "Studying when sequence-only label collapse discards condition-dependent variation."
+  ],
+  "rai:dataLimitations": [
+    "Binary labels simplify concentration-dependent solubility behavior.",
+    "Solubility outcomes may depend on unreported protocol variables such as pH, ionic strength, concentration, temperature, counterion, and incubation procedure.",
+    "The dataset should not be interpreted as a complete physical formulation model.",
+    "Performance on SolPepBench is not evidence of clinical, manufacturing, or regulatory readiness.",
+    "Modified peptides and noncanonical chemistries may require richer representations than the cleaned sequence string."
+  ],
+  "rai:dataBiases": [
+    "The solvent distribution is limited to seven labeled solvent conditions in the current processed release.",
+    "The dataset may reflect source-table selection biases toward peptides and solvents that were measured, synthesized, reported, or retained.",
+    "Positive and negative labels are moderately imbalanced, and label distributions differ across solvent conditions."
+  ],
+  "rai:dataSocialImpact": "Potential benefits include more transparent peptide solubility benchmarking and reduced unnecessary experimental screening. Potential risks include overinterpretation of benchmark predictions as definitive formulation decisions. The release is intended for research use and hypothesis generation, not clinical, regulatory, or manufacturing decision-making.",
+  "rai:personalSensitiveInformation": "The dataset does not contain human-subject data, patient records, personal identifiers, or clinical outcome data.",
+  "rai:dataSensitive": "The dataset does not contain human-subject data, patient records, personal identifiers, or clinical outcome data.",
+  "rai:dataReleaseMaintenance": "The intended maintenance model is conservative. Future releases should preserve raw inputs where possible, document changes to label mappings or preprocessing, and version official split files rather than silently redefining them.",
+  "rai:dataMaintenance": "Future releases should preserve raw inputs where possible, document changes, and version official split files and benchmark results."
+}

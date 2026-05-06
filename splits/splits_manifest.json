@@ -1,0 +1,629 @@
+{
+  "created_at_utc": "2026-05-06T15:36:10.335663+00:00",
+  "input_file": "data/processed/long_peptide_solvent.csv",
+  "seed": 2026,
+  "detected_columns": {
+    "record_id": "observation_id",
+    "sequence": "sequence_clean",
+    "solvent": "solvent_name",
+    "label": "y"
+  },
+  "n_records": 4405,
+  "n_unique_sequences": 1337,
+  "n_unique_solvents": 7,
+  "positive_rate": 0.6456299659477867,
+  "files": {
+    "pair_stratified_fold0.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 661,
+        "positive_rate": 0.6459909228441755,
+        "n_positive": 427,
+        "n_negative": 234,
+        "n_unique_sequences": 546,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 3083,
+        "positive_rate": 0.6454751865066494,
+        "n_positive": 1990,
+        "n_negative": 1093,
+        "n_unique_sequences": 1300,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 661,
+        "positive_rate": 0.6459909228441755,
+        "n_positive": 427,
+        "n_negative": 234,
+        "n_unique_sequences": 555,
+        "n_unique_solvents": 7
+      }
+    ],
+    "pair_stratified_5fold.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 881,
+        "positive_rate": 0.64472190692395,
+        "n_positive": 568,
+        "n_negative": 313,
+        "n_unique_sequences": 682,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 2643,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 1707,
+        "n_negative": 936,
+        "n_unique_sequences": 1251,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 693,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "test",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 693,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "train",
+        "n_records": 2643,
+        "positive_rate": 0.6454786227771472,
+        "n_positive": 1706,
+        "n_negative": 937,
+        "n_unique_sequences": 1263,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "val",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 679,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "test",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 679,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "train",
+        "n_records": 2643,
+        "positive_rate": 0.6454786227771472,
+        "n_positive": 1706,
+        "n_negative": 937,
+        "n_unique_sequences": 1268,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "val",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 679,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "test",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 679,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "train",
+        "n_records": 2643,
+        "positive_rate": 0.6454786227771472,
+        "n_positive": 1706,
+        "n_negative": 937,
+        "n_unique_sequences": 1260,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "val",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 688,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "test",
+        "n_records": 881,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 569,
+        "n_negative": 312,
+        "n_unique_sequences": 688,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "train",
+        "n_records": 2643,
+        "positive_rate": 0.6458569807037458,
+        "n_positive": 1707,
+        "n_negative": 936,
+        "n_unique_sequences": 1252,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "val",
+        "n_records": 881,
+        "positive_rate": 0.64472190692395,
+        "n_positive": 568,
+        "n_negative": 313,
+        "n_unique_sequences": 682,
+        "n_unique_solvents": 7
+      }
+    ],
+    "sequence_disjoint_fold0.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 678,
+        "positive_rate": 0.6548672566371682,
+        "n_positive": 444,
+        "n_negative": 234,
+        "n_unique_sequences": 201,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 3065,
+        "positive_rate": 0.6450244698205546,
+        "n_positive": 1977,
+        "n_negative": 1088,
+        "n_unique_sequences": 935,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 662,
+        "positive_rate": 0.6389728096676737,
+        "n_positive": 423,
+        "n_negative": 239,
+        "n_unique_sequences": 201,
+        "n_unique_solvents": 7
+      }
+    ],
+    "sequence_disjoint_5fold.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 875,
+        "positive_rate": 0.6662857142857143,
+        "n_positive": 583,
+        "n_negative": 292,
+        "n_unique_sequences": 268,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 2659,
+        "positive_rate": 0.6430989093644227,
+        "n_positive": 1710,
+        "n_negative": 949,
+        "n_unique_sequences": 801,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 871,
+        "positive_rate": 0.6326061997703789,
+        "n_positive": 551,
+        "n_negative": 320,
+        "n_unique_sequences": 268,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "test",
+        "n_records": 871,
+        "positive_rate": 0.6326061997703789,
+        "n_positive": 551,
+        "n_negative": 320,
+        "n_unique_sequences": 268,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "train",
+        "n_records": 2647,
+        "positive_rate": 0.651681148469966,
+        "n_positive": 1725,
+        "n_negative": 922,
+        "n_unique_sequences": 802,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 1,
+        "split": "val",
+        "n_records": 887,
+        "positive_rate": 0.6403607666290868,
+        "n_positive": 568,
+        "n_negative": 319,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "test",
+        "n_records": 887,
+        "positive_rate": 0.6403607666290868,
+        "n_positive": 568,
+        "n_negative": 319,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "train",
+        "n_records": 2640,
+        "positive_rate": 0.6496212121212122,
+        "n_positive": 1715,
+        "n_negative": 925,
+        "n_unique_sequences": 803,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 2,
+        "split": "val",
+        "n_records": 878,
+        "positive_rate": 0.6389521640091116,
+        "n_positive": 561,
+        "n_negative": 317,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "test",
+        "n_records": 878,
+        "positive_rate": 0.6389521640091116,
+        "n_positive": 561,
+        "n_negative": 317,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "train",
+        "n_records": 2633,
+        "positive_rate": 0.6464109380934295,
+        "n_positive": 1702,
+        "n_negative": 931,
+        "n_unique_sequences": 803,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 3,
+        "split": "val",
+        "n_records": 894,
+        "positive_rate": 0.6498881431767338,
+        "n_positive": 581,
+        "n_negative": 313,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "test",
+        "n_records": 894,
+        "positive_rate": 0.6498881431767338,
+        "n_positive": 581,
+        "n_negative": 313,
+        "n_unique_sequences": 267,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "train",
+        "n_records": 2636,
+        "positive_rate": 0.637329286798179,
+        "n_positive": 1680,
+        "n_negative": 956,
+        "n_unique_sequences": 802,
+        "n_unique_solvents": 7
+      },
+      {
+        "fold": 4,
+        "split": "val",
+        "n_records": 875,
+        "positive_rate": 0.6662857142857143,
+        "n_positive": 583,
+        "n_negative": 292,
+        "n_unique_sequences": 268,
+        "n_unique_solvents": 7
+      }
+    ],
+    "solvent_heldout_loso.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 711,
+        "positive_rate": 0.47538677918424754,
+        "n_positive": 338,
+        "n_negative": 373,
+        "n_unique_sequences": 641,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 3680,
+        "positive_rate": 0.6771739130434783,
+        "n_positive": 2492,
+        "n_negative": 1188,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 14,
+        "positive_rate": 1.0,
+        "n_positive": 14,
+        "n_negative": 0,
+        "n_unique_sequences": 14,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 1,
+        "split": "test",
+        "n_records": 14,
+        "positive_rate": 1.0,
+        "n_positive": 14,
+        "n_negative": 0,
+        "n_unique_sequences": 14,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 1,
+        "split": "train",
+        "n_records": 3697,
+        "positive_rate": 0.6981336218555586,
+        "n_positive": 2581,
+        "n_negative": 1116,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 1,
+        "split": "val",
+        "n_records": 694,
+        "positive_rate": 0.35878962536023057,
+        "n_positive": 249,
+        "n_negative": 445,
+        "n_unique_sequences": 668,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 2,
+        "split": "test",
+        "n_records": 694,
+        "positive_rate": 0.35878962536023057,
+        "n_positive": 249,
+        "n_negative": 445,
+        "n_unique_sequences": 668,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 2,
+        "split": "train",
+        "n_records": 3653,
+        "positive_rate": 0.6944976731453599,
+        "n_positive": 2537,
+        "n_negative": 1116,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 2,
+        "split": "val",
+        "n_records": 58,
+        "positive_rate": 1.0,
+        "n_positive": 58,
+        "n_negative": 0,
+        "n_unique_sequences": 56,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 3,
+        "split": "test",
+        "n_records": 58,
+        "positive_rate": 1.0,
+        "n_positive": 58,
+        "n_negative": 0,
+        "n_unique_sequences": 56,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 3,
+        "split": "train",
+        "n_records": 2911,
+        "positive_rate": 0.5293713500515287,
+        "n_positive": 1541,
+        "n_negative": 1370,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 3,
+        "split": "val",
+        "n_records": 1436,
+        "positive_rate": 0.866991643454039,
+        "n_positive": 1245,
+        "n_negative": 191,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 4,
+        "split": "test",
+        "n_records": 1436,
+        "positive_rate": 0.866991643454039,
+        "n_positive": 1245,
+        "n_negative": 191,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 4,
+        "split": "train",
+        "n_records": 2913,
+        "positive_rate": 0.5296944730518366,
+        "n_positive": 1543,
+        "n_negative": 1370,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 4,
+        "split": "val",
+        "n_records": 56,
+        "positive_rate": 1.0,
+        "n_positive": 56,
+        "n_negative": 0,
+        "n_unique_sequences": 56,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 5,
+        "split": "test",
+        "n_records": 56,
+        "positive_rate": 1.0,
+        "n_positive": 56,
+        "n_negative": 0,
+        "n_unique_sequences": 56,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 5,
+        "split": "train",
+        "n_records": 2913,
+        "positive_rate": 0.6536216958462067,
+        "n_positive": 1904,
+        "n_negative": 1009,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 5,
+        "split": "val",
+        "n_records": 1436,
+        "positive_rate": 0.6155988857938719,
+        "n_positive": 884,
+        "n_negative": 552,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 6,
+        "split": "test",
+        "n_records": 1436,
+        "positive_rate": 0.6155988857938719,
+        "n_positive": 884,
+        "n_negative": 552,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 6,
+        "split": "train",
+        "n_records": 2258,
+        "positive_rate": 0.7183348095659876,
+        "n_positive": 1622,
+        "n_negative": 636,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 6,
+        "split": "val",
+        "n_records": 711,
+        "positive_rate": 0.47538677918424754,
+        "n_positive": 338,
+        "n_negative": 373,
+        "n_unique_sequences": 641,
+        "n_unique_solvents": 1
+      }
+    ],
+    "solvent_heldout_fold0.csv": [
+      {
+        "fold": 0,
+        "split": "test",
+        "n_records": 711,
+        "positive_rate": 0.47538677918424754,
+        "n_positive": 338,
+        "n_negative": 373,
+        "n_unique_sequences": 641,
+        "n_unique_solvents": 1
+      },
+      {
+        "fold": 0,
+        "split": "train",
+        "n_records": 3680,
+        "positive_rate": 0.6771739130434783,
+        "n_positive": 2492,
+        "n_negative": 1188,
+        "n_unique_sequences": 1337,
+        "n_unique_solvents": 5
+      },
+      {
+        "fold": 0,
+        "split": "val",
+        "n_records": 14,
+        "positive_rate": 1.0,
+        "n_positive": 14,
+        "n_negative": 0,
+        "n_unique_sequences": 14,
+        "n_unique_solvents": 1
+      }
+    ]
+  }
+}

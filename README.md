@@ -1,194 +1,160 @@
-# PepSol2000 / SolPepBench
+# SolPepBench
 
-**PepSol2000** is the repository for **SolPepBench**, a solvent-conditioned peptide solubility dataset and benchmark.
+Anonymous review artifact for:
 
-The central design choice of SolPepBench is to treat solubility as a property of a **peptide-solvent observation**, rather than as a sequence-only property. The same peptide sequence may therefore have different solubility labels under different solvent or formulation conditions.
+**SolPepBench: A Solvent-Conditioned Dataset and Benchmark Definition for Peptide Solubility Prediction**
 
-## Overview
+SolPepBench is a solvent-conditioned peptide solubility dataset organized at the peptide--solvent observation level. The main prediction unit is a pair consisting of a peptide sequence and a solvent/formulation condition, with a binary label indicating whether the peptide is soluble under that condition.
 
-SolPepBench is intended for binary classification of peptide solubility under solvent-specific conditions.
+## Current anonymous review artifact
 
-Given:
+This artifact includes:
 
-```text
-peptide sequence + solvent / formulation condition
-```
+- raw wide-format input data;
+- processed long-format peptide--solvent data;
+- quality-control summaries and metadata;
+- official split files;
+- lightweight reference baseline results;
+- checksums;
+- Croissant machine-readable metadata;
+- scripts for dataset processing, split construction, and baseline evaluation.
 
-the task is to predict:
+## Dataset summary
 
-```text
-y = 1  soluble
-y = 0  insoluble
-```
-
-## Current processed release
-
-The current processed release contains peptide-solvent-level solubility records generated from the raw wide-format input table.
+The current processed release contains:
 
 | Quantity | Value |
 |---|---:|
 | Raw wide peptide rows | 1,957 |
-| Labeled peptide-solvent records | 4,405 |
-| Unique peptides in long table | 1,337 |
-| Solvents with labels | 7 |
+| Labeled peptide--solvent records | 4,405 |
+| Unique peptide sequences | 1,337 |
+| Solvent conditions | 7 |
 | Soluble records | 2,844 |
 | Insoluble records | 1,561 |
 | Positive rate | 0.6456 |
-| Sequences tested in multiple solvents | 1,337 |
-| Discordant solvent-label sequences | 839 |
-| Duplicate sequence-solvent groups | 219 |
-| Conflicting sequence-solvent groups | 21 |
+| Sequences with discordant labels across solvents | 839 |
+| Duplicate sequence--solvent groups | 219 |
+| Conflicting sequence--solvent groups | 21 |
 
-The main processed long-format table is:
+## Main files
 
-```text
-data/processed/long_peptide_solvent.csv
-```
-
-This table represents the dataset at the peptide-solvent observation level.
-
-## Repository structure
-
-```text
-data/
-  raw/
-    pep.csv
-
-  processed/
-    clean_wide.csv
-    long_peptide_solvent.csv
-    features_for_model.csv
-    peptide_features.csv
-    solvent_summary.csv
-    sequence_label_variability.csv
-    duplicate_conflicts.csv
-    sequence_qc.csv
-    mw_discrepancies.csv
-    unknown_label_values.csv
-    solvent_metadata_template.csv
-    summary.json
-    paper_numbers.txt
-
-  metadata/
-    dataset_metadata.json
-    data_dictionary.csv
-    checksums.sha256
-
-docs/
-  paper_numbers.txt
-
-scripts/
-  build_dataset.py
-
-baselines/
-  README.md
-
-splits/
-  README.md
-```
-
-## Key files
-
-| File | Description |
+| Path | Description |
 |---|---|
-| `data/raw/pep.csv` | Raw wide-format peptide table. |
-| `data/processed/long_peptide_solvent.csv` | Main long-format peptide-solvent solubility table. |
-| `data/processed/features_for_model.csv` | Feature-oriented table prepared for downstream modeling. |
-| `data/processed/peptide_features.csv` | Peptide-level derived feature table. |
-| `data/processed/solvent_summary.csv` | Solvent-level label summary. |
-| `data/processed/sequence_label_variability.csv` | Sequence-level variability across solvent conditions. |
-| `data/processed/duplicate_conflicts.csv` | Duplicate sequence-solvent groups with conflicting labels. |
-| `data/processed/summary.json` | Machine-readable summary statistics. |
-| `docs/paper_numbers.txt` | Human-readable summary numbers for manuscript writing. |
-| `data/metadata/dataset_metadata.json` | Dataset-level metadata. |
-| `data/metadata/data_dictionary.csv` | Initial data dictionary. |
-| `data/metadata/checksums.sha256` | SHA-256 checksums for raw, processed, and metadata files. |
-| `scripts/build_dataset.py` | Dataset construction script used to generate the processed outputs. |
+| `data/raw/pep.csv` | Raw wide-format peptide table |
+| `data/processed/long_peptide_solvent.csv` | Main long-format peptide--solvent table |
+| `data/processed/summary.json` | Machine-readable dataset summary |
+| `data/metadata/dataset_metadata.json` | Dataset-level metadata |
+| `data/metadata/data_dictionary.csv` | Data dictionary |
+| `data/metadata/checksums.sha256` | SHA-256 checksums |
+| `data/metadata/croissant.json` | Croissant machine-readable metadata |
+| `splits/` | Official split files |
+| `results/baselines/` | Reference baseline results |
+| `scripts/build_dataset.py` | Dataset construction script |
+| `scripts/make_official_splits.py` | Official split construction script |
+| `scripts/run_reference_baselines.py` | Reference baseline script |
+| `scripts/make_croissant.py` | Croissant metadata generation script |
 
-## Prediction unit
+## Installation
 
-The prediction unit is a **peptide-solvent observation**.
+A minimal Python environment is sufficient for the official split and baseline scripts.
 
-This means that the same peptide sequence can appear more than once if it was measured or labeled under different solvent conditions. This structure is intentional and is central to the benchmark.
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements-minimal.txt
 
-A simplified example is:
+If using conda:
 
-| Peptide sequence | Solvent condition | Label |
-|---|---|---:|
-| PEPTIDEA | solvent A | 1 |
-| PEPTIDEA | solvent B | 0 |
+    conda create -n solpepbench python=3.11 -y
+    conda activate solpepbench
+    pip install -r requirements-minimal.txt
 
-Such cases are not treated as simple duplicates. They are evidence that peptide solubility may be condition-dependent.
+## Reproduce official splits
 
-## Why solvent-conditioned solubility?
+From the repository root:
 
-Many peptide solubility datasets are organized as if each peptide sequence has a single intrinsic solubility label. In practice, solubility depends on experimental or formulation conditions, including solvent environment.
+    python scripts/make_official_splits.py \
+      --input data/processed/long_peptide_solvent.csv \
+      --outdir splits \
+      --seed 2026
 
-SolPepBench is organized to support models and analyses that account for this condition dependence.
+Expected output files include:
 
-## Current status
+- `splits/pair_stratified_fold0.csv`
+- `splits/pair_stratified_5fold.csv`
+- `splits/sequence_disjoint_fold0.csv`
+- `splits/sequence_disjoint_5fold.csv`
+- `splits/solvent_heldout_loso.csv`
+- `splits/solvent_heldout_fold0.csv`
+- `splits/splits_manifest.json`
 
-This repository currently provides:
+## Reproduce reference baselines
 
-- raw input data;
-- processed peptide-solvent-level tables;
-- dataset-level summary statistics;
-- metadata files;
-- checksums;
-- the dataset construction script;
-- placeholder directories for future baselines and official splits.
+From the repository root:
 
-The following components may be added in later releases:
+    python scripts/run_reference_baselines.py \
+      --data data/processed/long_peptide_solvent.csv \
+      --splits splits \
+      --outdir results/baselines \
+      --seed 2026
 
-- official train/validation/test splits;
-- baseline model training code;
-- evaluation scripts;
-- Croissant metadata;
-- automated reporting utilities.
+Expected output files include:
+
+- `results/baselines/baseline_results.csv`
+- `results/baselines/baseline_summary.csv`
+- `results/baselines/baseline_table.tex`
+- `results/baselines/baseline_metadata.json`
+- `results/baselines/baseline_errors.csv`
+
+The reference models are intentionally lightweight and reproducible. They are intended as sanity-check and reference baselines, not as optimized state-of-the-art models.
+
+## Regenerate Croissant metadata
+
+    python scripts/make_croissant.py
+    python -m json.tool data/metadata/croissant.json >/tmp/croissant.pretty.json
+
+## Rebuild processed data from raw input
+
+The processed release files are included in the artifact. The preprocessing script used for dataset construction is:
+
+    python scripts/build_dataset.py
+
+If modifying preprocessing logic, regenerate processed outputs, official splits, baseline results, checksums, and Croissant metadata before reporting new results.
+
+## Official evaluation protocols
+
+The release includes three official evaluation families:
+
+1. **Pair-stratified**: peptide--solvent observations are split while preserving label balance.
+2. **Sequence-disjoint**: peptide sequences are not shared between train and test.
+3. **Solvent-held-out**: solvent identities are held out to evaluate transfer across solvent conditions.
+
+The `splits/` directory is part of the released benchmark artifact. Downstream users should report the exact split files, random seed, repository version, and checksum used in experiments.
 
 ## Intended use
 
 SolPepBench is intended for:
 
-- benchmarking solvent-conditioned peptide solubility prediction methods;
-- studying peptide solubility variation across solvent conditions;
-- developing peptide-solvent representation learning methods;
-- supporting manuscript-level analysis of condition-dependent peptide solubility.
+- dataset analysis of solvent-conditioned peptide solubility labels;
+- development and evaluation of solvent-aware peptide solubility predictors;
+- studying when sequence-only label collapse discards condition-dependent variation;
+- reproducible benchmarking under pair-stratified, sequence-disjoint, and solvent-held-out protocols.
 
 ## Out-of-scope use
 
-This dataset is not intended for:
+SolPepBench is not intended for:
 
-- direct clinical decision-making;
+- clinical decision-making;
 - manufacturing release decisions;
-- replacement of experimental solubility testing;
-- claims about peptide biological activity, toxicity, safety, or efficacy.
+- regulatory submission;
+- claims about biological efficacy or safety;
+- replacing experimental solubility testing.
 
-## Reproducibility notes
+Predictions from models trained on this dataset should be treated as hypotheses for experimental follow-up, not definitive formulation decisions.
 
-Processed files in `data/processed/` were generated from the raw input table using:
+## Licenses
 
-```text
-scripts/build_dataset.py
-```
+Code is released under the MIT license. Data, metadata, documentation, split files, and result tables are released under CC BY 4.0 for the anonymous review artifact.
 
-The summary statistics used in the manuscript should be taken from:
+## Anonymous review note
 
-```text
-docs/paper_numbers.txt
-data/processed/summary.json
-data/metadata/dataset_metadata.json
-```
-
-## License
-
-This repository uses separate licenses for code and data.
-
-- Code: MIT License. See `LICENSE-CODE.md`.
-- Data, metadata, and documentation: Creative Commons Attribution 4.0 International License. See `LICENSE-DATA.md`.
-
-## Citation
-
-A formal citation will be added after manuscript submission or publication.
-
-For now, please cite this repository as the initial SolPepBench / PepSol2000 dataset release.
+This repository is prepared as an anonymous review artifact. The public camera-ready release should replace anonymous metadata with final author, repository, archival DOI, and citation information.

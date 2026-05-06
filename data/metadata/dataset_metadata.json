@@ -41,13 +41,41 @@
     "Replacement of experimental solubility testing",
     "Claims about biological activity, toxicity, safety, or efficacy"
   ],
-  "release_status": {
-    "data_tables": "included",
-    "basic_metadata": "included",
-    "readme": "included",
-    "baseline_code": "to_be_added_later",
-    "official_splits": "to_be_added_later",
-    "croissant_metadata": "to_be_added_later",
-    "reporting_utilities": "to_be_added_later"
-  }
+  "release_status": "Anonymous review artifact includes processed data, official split files, lightweight reference baseline results, checksums, and Croissant metadata.",
+  "official_splits": {
+    "directory": "splits/",
+    "seed": 2026,
+    "files": [
+      "splits/pair_stratified_fold0.csv",
+      "splits/pair_stratified_5fold.csv",
+      "splits/sequence_disjoint_fold0.csv",
+      "splits/sequence_disjoint_5fold.csv",
+      "splits/solvent_heldout_loso.csv",
+      "splits/solvent_heldout_fold0.csv",
+      "splits/splits_manifest.json"
+    ]
+  },
+  "reference_baselines": {
+    "directory": "results/baselines/",
+    "seed": 2026,
+    "script": "scripts/run_reference_baselines.py",
+    "files": [
+      "results/baselines/baseline_results.csv",
+      "results/baselines/baseline_summary.csv",
+      "results/baselines/baseline_table.tex",
+      "results/baselines/baseline_metadata.json",
+      "results/baselines/baseline_errors.csv"
+    ],
+    "models": [
+      "majority_class",
+      "stratified_dummy",
+      "sequence_logistic",
+      "solvent_logistic",
+      "sequence_solvent_logistic",
+      "sequence_solvent_random_forest",
+      "sequence_solvent_gradient_boosting"
+    ]
+  },
+  "croissant_metadata": "data/metadata/croissant.json",
+  "artifact_url": "https://anonymous.4open.science/r/PepSol2000-93DC/"
 }
